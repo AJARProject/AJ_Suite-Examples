@@ -1,0 +1,323 @@
+﻿{
+	"$4d": {
+		"version": "1",
+		"kind": "form"
+	},
+	"windowSizingX": "variable",
+	"windowSizingY": "variable",
+	"windowMinWidth": 0,
+	"windowMinHeight": 0,
+	"windowMaxWidth": 32767,
+	"windowMaxHeight": 32767,
+	"rightMargin": 0,
+	"bottomMargin": 10,
+	"events": [
+		"onLoad",
+		"onPageChange",
+		"onValidate",
+		"onClick",
+		"onDoubleClick",
+		"onOutsideCall",
+		"onBeginDragOver",
+		"onDragOver",
+		"onDrop",
+		"onAfterKeystroke",
+		"onMenuSelect",
+		"onPluginArea",
+		"onAfterEdit",
+		"onTimer",
+		"onBoundVariableChange"
+	],
+	"windowTitle": "window title",
+	"destination": "detailScreen",
+	"pages": [
+		{
+			"objects": {}
+		},
+		{
+			"objects": {
+				"Invoice_lb": {
+					"type": "listbox",
+					"left": 3,
+					"top": 83,
+					"width": 1020,
+					"height": 499,
+					"events": [
+						"onLoad"
+					],
+					"listboxType": "collection",
+					"dataSource": "<>allInvoices_selection",
+					"showFooters": true,
+					"currentItemSource": "",
+					"currentItemPositionSource": "",
+					"selectedItemsSource": "",
+					"resizingMode": "legacy",
+					"selectionMode": "multiple",
+					"scrollbarHorizontal": "hidden",
+					"method": "ObjectMethods/Invoice_lb.4dm",
+					"scrollbarVertical": "automatic",
+					"rowFillSource": "Choose:C955(This:C1470.locked;\"#6E94E6\";\"white\")",
+					"alternateFill": "automatic",
+					"focusable": false,
+					"columns": [
+						{
+							"header": {
+								"name": "Entête1",
+								"text": "Date"
+							},
+							"name": "Colonne1",
+							"width": 90,
+							"dataSource": "This:C1470.invoice_date",
+							"footer": {
+								"name": "Pied1",
+								"fill": "automatic",
+								"dataSource": "<>total",
+								"fontWeight": "bold"
+							},
+							"dateFormat": "short"
+						},
+						{
+							"header": {
+								"text": "invoice",
+								"name": "invoice_head"
+							},
+							"name": "Column1",
+							"footer": {
+								"name": "invoice_count",
+								"dataSourceTypeHint": "number",
+								"variableCalculation": "none",
+								"dataSource": "<>invoice_count",
+								"fill": "automatic",
+								"fontWeight": "bold"
+							},
+							"dataSource": "This:C1470.invoice_ref",
+							"maxWidth": 32767,
+							"enterable": false,
+							"width": 120
+						},
+						{
+							"header": {
+								"name": "start_head",
+								"text": "start"
+							},
+							"name": "date_start_col",
+							"footer": {
+								"name": "Footer2",
+								"fill": "automatic"
+							},
+							"dataSource": "This:C1470.start",
+							"dataSourceTypeHint": "date",
+							"enterable": false,
+							"width": 90,
+							"maxWidth": 100,
+							"dateFormat": "short"
+						},
+						{
+							"header": {
+								"name": "end_head",
+								"text": "end"
+							},
+							"name": "date_end_col",
+							"footer": {
+								"name": "Footer3",
+								"fill": "automatic"
+							},
+							"dataSourceTypeHint": "date",
+							"dataSource": "This:C1470.end",
+							"enterable": false,
+							"width": 90,
+							"maxWidth": 100,
+							"dateFormat": "short"
+						},
+						{
+							"header": {
+								"name": "amount_inv_head",
+								"text": "Total"
+							},
+							"name": "Column4",
+							"footer": {
+								"name": "tot_amount_invoiced",
+								"dataSourceTypeHint": "number",
+								"variableCalculation": "none",
+								"dataSource": "<>tot_amount_invoiced",
+								"numberFormat": "|Schweiz",
+								"fill": "automatic",
+								"fontWeight": "bold"
+							},
+							"dataSourceTypeHint": "number",
+							"dataSource": "This:C1470.amount_invoiced",
+							"numberFormat": "|Schweiz",
+							"enterable": false,
+							"width": 90,
+							"maxWidth": 100
+						},
+						{
+							"header": {
+								"name": "rate_head",
+								"text": "rate"
+							},
+							"name": "rate",
+							"footer": {
+								"name": "Footer5",
+								"fill": "automatic"
+							},
+							"dataSourceTypeHint": "number",
+							"dataSource": "This:C1470.rate",
+							"numberFormat": "|Schweiz2",
+							"enterable": false,
+							"width": 70,
+							"maxWidth": 100
+						},
+						{
+							"header": {
+								"name": "amount_pay_head",
+								"text": "Payed"
+							},
+							"name": "amount_invoiced_eur",
+							"footer": {
+								"name": "tot_amount_payed",
+								"dataSourceTypeHint": "number",
+								"variableCalculation": "none",
+								"dataSource": "<>tot_amount_payed",
+								"numberFormat": "|Schweiz",
+								"fill": "automatic",
+								"fontWeight": "bold"
+							},
+							"dataSourceTypeHint": "number",
+							"dataSource": "This:C1470.amount_payed",
+							"method": "",
+							"numberFormat": "|Schweiz",
+							"enterable": false,
+							"width": 90,
+							"maxWidth": 100
+						},
+						{
+							"header": {
+								"name": "days_current_year_head",
+								"text": "days_current",
+								"dataSource": ""
+							},
+							"name": "days_start_col",
+							"footer": {
+								"name": "Footer7",
+								"dataSource": "",
+								"fill": "automatic"
+							},
+							"dataSourceTypeHint": "number",
+							"dataSource": "This:C1470.days_currentyear",
+							"enterable": false,
+							"width": 90,
+							"maxWidth": 100
+						},
+						{
+							"header": {
+								"name": "days_next_year_head",
+								"text": "days_next",
+								"dataSource": ""
+							},
+							"name": "days_end_col",
+							"footer": {
+								"name": "Footer8",
+								"fill": "automatic"
+							},
+							"dataSourceTypeHint": "number",
+							"dataSource": "This:C1470.days_nextyear",
+							"enterable": false,
+							"width": 90,
+							"maxWidth": 100
+						},
+						{
+							"header": {
+								"name": "amount_this_year_head",
+								"text": "amount_current",
+								"dataSource": ""
+							},
+							"name": "Column9",
+							"footer": {
+								"name": "amount_this year",
+								"dataSourceTypeHint": "number",
+								"variableCalculation": "none",
+								"dataSource": "<>amount_this_year",
+								"numberFormat": "|Schweiz",
+								"fill": "automatic",
+								"fontWeight": "bold"
+							},
+							"dataSourceTypeHint": "number",
+							"dataSource": "This:C1470.amount_currentYear",
+							"numberFormat": "|Schweiz",
+							"enterable": false,
+							"width": 100,
+							"maxWidth": 100
+						},
+						{
+							"header": {
+								"name": "amount_next_year_head",
+								"text": "amount_next",
+								"dataSource": ""
+							},
+							"name": "Column10",
+							"footer": {
+								"name": "amount_next_year",
+								"dataSourceTypeHint": "number",
+								"variableCalculation": "none",
+								"dataSource": "<>amount_next_year",
+								"numberFormat": "|Schweiz",
+								"fill": "automatic",
+								"fontWeight": "bold"
+							},
+							"dataSource": "This:C1470.amount_nextYear",
+							"numberFormat": "|Schweiz",
+							"enterable": false,
+							"width": 100,
+							"maxWidth": 100
+						}
+					]
+				},
+				"print_label": {
+					"type": "input",
+					"left": 2,
+					"top": 5,
+					"width": 1021,
+					"height": 49,
+					"dataSource": "<>print_label",
+					"placeholder": "",
+					"enterable": false,
+					"focusable": false,
+					"fontTheme": "main",
+					"fontWeight": "bold",
+					"borderStyle": "none",
+					"fill": "#6495ED",
+					"class": "Title2"
+				},
+				"print_page": {
+					"type": "input",
+					"left": 956,
+					"top": 691,
+					"width": 88,
+					"height": 17,
+					"dataSource": "<>page",
+					"dataSourceTypeHint": "integer",
+					"enterable": false,
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none"
+				},
+				"print_date": {
+					"type": "input",
+					"left": 3,
+					"top": 691,
+					"width": 304,
+					"height": 17,
+					"dataSource": "String:C10(Current date:C33)+\", \"+String:C10(Current time:C178)",
+					"dataSourceTypeHint": "text",
+					"enterable": false,
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none"
+				}
+			}
+		}
+	],
+	"method": "method.4dm",
+	"formSizeAnchor": "print_page"
+}

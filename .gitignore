@@ -7,7 +7,6 @@ Cache.xml
 Conversion*.json
 LogStyleSheet.xsl
 **/DerivedData/**
-data.match
 *Components-inactivate/*
 userPreferences.*
 
@@ -15,20 +14,14 @@ userPreferences.*
 # 4D project architecture
 ######################
 
-/Data/*
-/Logs/*
-/Project/DerivedData/*
-/Project/BuildSettings/*
-/Settings/*
-/userPreferences*/*
-/Builds/*
 
-# Don't need the data file, indexes, symbols, or journal
-*.4DD
-*.4DIndx
-*symbols.txt
-*.journal
-*.match
+/*/Data/Logs/*
+/*/Project/DerivedData/*ß
+/*/Project/BuildSettings/*
+/*/Settings/*
+/*/userPreferences*/*
+/*/Builds/*
+
 
 # dont need the 4d info component folder_reports
 Folder_Reports

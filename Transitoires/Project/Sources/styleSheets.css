@@ -1,0 +1,16 @@
+#Title {
+	text-transform: uppercase;
+	color: red;
+	font: bold 18px "Lucida Grande", Lucida, Verdana, sans-serif;
+}
+
+.Title2 {
+	font-family: "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+	fontSize: 40px;
+	color: white;
+	fontWeight: bold;
+}
+
+.year {
+	font: bold 24px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+}

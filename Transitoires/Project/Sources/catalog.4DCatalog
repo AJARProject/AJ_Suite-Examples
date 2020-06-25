@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE base SYSTEM "http://www.4d.com/dtd/2007/base.dtd" >
+<base name="" uuid="0BA4217426DC4A3B8B2073A90950743B" collation_locale="en">
+	<schema name="DEFAULT_SCHEMA"/>
+	<table name="invoice" uuid="5F3344133BCC4D82BF40EF0FFEFECA9F" id="1">
+		<field name="UUID" uuid="05AA40BE5AD24C8198A7E7BECF172663" type="10" unique="true" autogenerate="true" store_as_UUID="true" not_null="true" id="1"/>
+		<field name="invoice_ref" uuid="22ED583FACD74381B9EE24F7C761148D" type="10" limiting_length="255" never_null="true" id="2"/>
+		<field name="start" uuid="29F126FBF445427CAA95CBABB578DD4F" type="8" never_null="true" id="3"/>
+		<field name="end" uuid="852453C9BC084EC5892E82E6DA8D5CDC" type="8" never_null="true" id="4"/>
+		<field name="amount_invoiced" uuid="FED5A3054B2A429EA1FD4779C6449C9E" type="6" never_null="true" id="5"/>
+		<field name="invoice_date" uuid="376F078F4F7F458EA93B06D8FDED7F8A" type="8" never_null="true" id="6"/>
+		<field name="amount_payed" uuid="6B67D147A8AC468AB1E4AD164E667B7F" type="6" never_null="true" id="7"/>
+		<field name="type" uuid="1E1291E5046F42E896FDEB88359F11D2" type="10" limiting_length="255" never_null="true" id="8"/>
+		<field name="rate" uuid="A7D8B76D0A6742DEBC6DF45DDE7C5215" type="6" never_null="true" id="9"/>
+		<field name="currency" uuid="67C0916219284C029734182A07BD217B" type="10" limiting_length="255" never_null="true" id="10"/>
+		<field name="locked" uuid="E2108E0974E04FD5B5E72DDEDFDD85B8" type="1" never_null="true" id="11"/>
+		<primary_key field_name="UUID" field_uuid="05AA40BE5AD24C8198A7E7BECF172663"/>
+		<table_extra>
+			<editor_table_info displayable_fields_count="11">
+				<color red="255" green="255" blue="255" alpha="0"/>
+				<coordinates left="37.75" top="0" width="206.3515625" height="292.90625"/>
+			</editor_table_info>
+		</table_extra>
+	</table>
+	<index kind="regular" unique_keys="true" uuid="2FF72070F01745C395798C92078B5B3F" type="7">
+		<field_ref uuid="05AA40BE5AD24C8198A7E7BECF172663" name="UUID">
+			<table_ref uuid="5F3344133BCC4D82BF40EF0FFEFECA9F" name="invoice"/>
+		</field_ref>
+	</index>
+	<base_extra __stringCompHash="icu:63.1.0" __keywordBuildingHash="icu:63.1.0">
+		<journal_file journal_file_enabled="true"/>
+	</base_extra>
+</base>

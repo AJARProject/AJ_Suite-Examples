@@ -1,21 +1,18 @@
 ﻿<!-- HDI_Dialog_TestPB ( )  -->
 
-# HDI_Dialog_TestPB
-
-## Parameters
-
- *  none
-
-## Return value
-
-none
 
 ## Description
 
 HDI (How do I) form to test the progress bar
 
+```4d
+HDI_Dialog_TestPB ( )
+```
 ## Example
 
-```
-  HDI_Dialog_TestPB ( )
+```4d
+Case of
+  : (Form event code=On Clicked)
+   HDI_Dialog_TestPB ( )
+End case
 ```

@@ -1,23 +1,30 @@
-﻿<!-- AJUI_ProgressBar ( ) -> ProgressBar class  -->
+﻿<!-- AJUI_ProgressBar.new ( ) -> instance of ProgressBar class  -->
 
-# AJUI_ProgressBar
-
-## Parameters
-
- *  none
-
-## Return value
-
-(object) ProgressBar class
 
 ## Description
 
-Exposes the ProgressBar class at the host base.
+Exposes the ProgressBar class at the host base. Replace New AJUI_ProgressBar since V18R3
+
+```4d
+  AJUI_ProgressBar.new ( ) -> instance
+```
+
+| Parameter | Type | In/Out | Description |
+| --------- | ---- | ------ | ----------- |
+| instance | object | out | instance of ProgressBar class |
 
 ## Example
 
-```
-  C_Object ($PBClass)
+```4d
+  C_Object ($mypb)
   
-  $PBClass:=AJUI_ProgressBar
+  //create a  progessbar and call it
+  $mypb:=AJUI_ProgressBar.new() 
+  $mypb.PBAreaHeight(20)
+  $mypb.PBAreaWidth(400)
+  $mypb.PBPercentValue(0)
+  $mypb.PBTitle("Step 0/3")
+  $mypb.PBActivateAnimation(False)
+  $mypb.PBPictFormObjName("PB1")
+  $mypb.LaunchProgressBar()
 ```

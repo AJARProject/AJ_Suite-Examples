@@ -1,23 +1,28 @@
-﻿<!-- AJUI_CircularProgressBar ( ) -> CircularProgressBar class  -->
+﻿<!-- AJUI_CircularProgressBar.new ( ) -> instance of CircularProgressBar class  -->
 
-# AJUI_CircularProgressBar
-
-## Parameters
-
- *  none
-
-## Return value
-
-(object) CircularProgressBar class
 
 ## Description
 
-Exposes the CircularProgressBar class at the host base.
+Exposes the CircularProgressBar class at the host base. Replace New AJUI_CircularProgressBar since V18R3.
+
+```4d
+  AJUI_CircularProgressBar.new ( ) -> instance
+```
+
+| Parameter | Type | In/Out | Description |
+| --------- | ---- | ------ | ----------- |
+| instance | object | out | instance of CircularProgressBar class  |
 
 ## Example
 
 ```
-  C_Object ($CPBClass)
+  C_Object ($mycpb)
   
-  $CPBClass:=AJUI_CircularProgressBar
+  //create a circular progessbar and call it
+  $mycpb:=AJUI_CircularProgressBar.new() 
+  $mycpb.CPBExternalRadius(70)
+  $mycpb.CPBPercentValue(0)
+  $mycpb.CPBActivateAnimation(True)
+  $mycpb.CPBPictFormObjName("circularPB")
+  $mycpb.LaunchCircularProgressBar()
 ```

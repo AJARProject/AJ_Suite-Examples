@@ -1,5 +1,4 @@
-﻿<!-- AJUIB_Info ( ) -> version -->
-
+﻿<!-- AJUI_ProgressBar_Info ( ) -> version -->
 
 
 ## Description
@@ -7,7 +6,7 @@
 Show the version info of the component.
 
 ```4d
-  AJUIB_Info ( ) -> version
+  AJUI_ProgressBar_Info ( ) -> version
 ```
 
 | Parameter | Type | In/Out | Description |
@@ -20,5 +19,5 @@ Show the version info of the component.
 ```4d
   C_String($version)
 
-  $version:= AJUIB_Info () //AJUI Banner (v18) : 1.7.2-Build21
+  $version:= AJUI_ProgressBar_Info () //AJUI ProgressBar (v18) : 1.1.1-Build20
 ```
